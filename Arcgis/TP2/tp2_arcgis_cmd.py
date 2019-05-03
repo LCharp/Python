@@ -38,9 +38,9 @@ arcpy.AddField_management("autor11l2p","km","SHORT")
 # -> Calculer un champ #
 arcpy.CalculateField_management("autor11l2p","km","!Shape_Length!/1000","PYTHON")
 #  ____________________
-# | Shape_Lenght | km |
+# | Shape_Length | km |
 # |______________|____|
-# |  9187,55485  | 9  |
+# |  9187,55485  |  9 |
 # |______________|____|
 
 # -> Supprimer un champ #
