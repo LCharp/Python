@@ -1,7 +1,10 @@
-#############################
+ ###########################
 #   TP2 Python sous Arcgis  #
 #     Espaces de Travail    #
-#############################
+ ###########################
+#      Suivi du fichier     #
+#  TP_Espace_de_travail.doc #
+ ###########################
 
 # -> Définir un espace de travail #
 arcpy.env.workspace="C:/charpentier/Arcgis_Python/TP2/tp2.mdb"
