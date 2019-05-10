@@ -3,7 +3,6 @@
 #       TP3 Curseur.doc    #
 #############################
 
-
  # -> Question 1 : Dénombrer les communes et la population dans l'Aude
 arcpy.env.workspace = "C:\charpentier\Arcgis_Python\TP3\tp3_gdb.gdb"
 curseur = arcpy.SearchCursor("com11l2p")
@@ -16,6 +15,7 @@ print "Nombre de communes dans l'AUde :" ,nb
 print "Population de l'Aude :" ,pop,"habitants"
  # Population de l'Aude : 298898.0 habitants
 
+
  # -> Question 2 : Commune la plus peuplée + sa population
 curseur = arcpy.SearchCursor("com11l2p","",None,"NOM ; POP", "POP D")
 ligne = curseur.next()
@@ -23,6 +23,7 @@ nom = ligne.getValue("NOM")
 population = ligne.POP
 print "Commune la plus peuplée de l'Aude :",nom,population,"hbts"
  # Commune la plus peuplée de l'Aude : NARBONNE 45866.0 hbts
+
 
  # -> Question 3 : 5 communes les plus peuplées + pop (indiv) + pop (total)
 curseur = arcpy.SearchCursor("com11l2p","",None,"NOM ; POP", "POP D")
@@ -39,16 +40,20 @@ print ("La population totale de s5 plus grandes villes de l'aude est " + str(pop
  # La commune numero 5 est TREBES sa population est de 5576.0
  # La population totale de s5 plus grandes villes de l'aude est 123472.0
 
+
  # -> Question 4 : Ajouter + 100 à un champ et - 100
  curseur = arcpy.UpdateCursor("com11l2p","\"NOM\" = 'CARCASSONNE'",None,"POP")
  ligne = curseur.next()
+ 
+ # ADDITION
  ligne.POP += 100
  #  ______
  # | pop |
  # |_____|
  # | 4351|
  # |_____|
- # ou
+
+ # SOUSTRACTION
  ligne.POP -= 100
   #  ______
   # | pop |
@@ -56,6 +61,7 @@ print ("La population totale de s5 plus grandes villes de l'aude est " + str(pop
   # | 4341|
   # |_____|
  curseur.updateRow(ligne)
+
 
  # -> Question 5a : Ajouter une ligne (nom et pop)
  curseur = arcpy.InsertCursor("communes")
