@@ -3,7 +3,7 @@
 #       TP1 Document.doc    #
 #############################
 
-mxdtp1  =  arcpy.mapping.MapDocument("CURRENT")
+mxdtp1  = arcpy.mapping.MapDocument("CURRENT")
 print(mxdtp1)
 #<geoprocessing Map object object at 0x32EC85E0>
 
