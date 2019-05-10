@@ -10,7 +10,7 @@ nb, pop = 0,0
 for ligne in curseur:
      nb += 1
      pop += ligne.POP
-print "Nombre de communes dans l'AUde :" ,nb
+print "Nombre de communes dans l'Aude :" ,nb
  # Nombre de communes dans l'AUde : 438
 print "Population de l'Aude :" ,pop,"habitants"
  # Population de l'Aude : 298898.0 habitants
@@ -44,22 +44,22 @@ print ("La population totale de s5 plus grandes villes de l'aude est " + str(pop
  # -> Question 4 : Ajouter + 100 à un champ et - 100
  curseur = arcpy.UpdateCursor("com11l2p","\"NOM\" = 'CARCASSONNE'",None,"POP")
  ligne = curseur.next()
- 
+
  # ADDITION
  ligne.POP += 100
- #  ______
- # | pop |
- # |_____|
- # | 4351|
- # |_____|
+ #  _______
+ # |  pop |
+ # |______|
+ # | 43511|
+ # |______|
 
  # SOUSTRACTION
  ligne.POP -= 100
-  #  ______
-  # | pop |
-  # |_____|
-  # | 4341|
-  # |_____|
+  #  _______
+  # |  pop |
+  # |______|
+  # | 43411|
+  # |______|
  curseur.updateRow(ligne)
 
 
