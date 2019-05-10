@@ -11,7 +11,6 @@
 import arcpy
 from arcpy import env
 from tp2_idle_python_fonctions import *
-
 arcpy.env.workspace="C:/charpentier/Arcgis_Python/TP3/tp3_gdb.gdb"
 ma_bdd=arcpy.env.workspace
 mes_classes=arcpy.ListFeatureClasses("*")
