@@ -24,4 +24,4 @@ Memento sur l'utilisation de Python sous Arcgis (Arcpy).
 |Selection Attribut		|`arcpy.SelectLayerByAttribute_management` |[TP4](https://github.com/LCharp/Python/blob/master/Arcgis/tp4/tp4_arcmap.py)|
 |Selection Emplacement	|`arcpy.SelectLayerByLocation_management` |[TP4](https://github.com/LCharp/Python/blob/master/Arcgis/tp4/tp4_arcmap.py)|
 |Créer Couche (de la selection)	|`mxd_tp1=arcpy.mapping.MapDocument("CURRENT")` |[TP4](https://github.com/LCharp/Python/blob/master/Arcgis/tp4/tp4_arcmap.py)|
-|Deselectionner	|`arcpy.SelectLayerByAttribute_management("CLEAR_SELECTION")` |[TP4](https://github.com/LCharp/Python/blob/master/Arcgis/tp4/tp4_arcmap.py)|
+|Annuler la Selection	|`arcpy.SelectLayerByAttribute_management("CLEAR_SELECTION")` |[TP4](https://github.com/LCharp/Python/blob/master/Arcgis/tp4/tp4_arcmap.py)|
